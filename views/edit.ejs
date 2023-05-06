@@ -1,0 +1,30 @@
+<pre>
+
+</pre>
+<form method="post" action="/transactions/updateTransaction">
+    <input type="hidden" name="transactionId" value="<%= transaction._id %>">
+    edit your transaction:
+ 
+    <div>
+      <label for="description"> description:</label>
+      <input type="text" name="description" id="description" value="<%= transaction.description %>" required>
+    </div>
+      <div>
+        <label for="category"> category:</label>
+        <input type="text" name="category" id="category" value="<%= transaction.category %>"  required>
+      </div>
+      <div>
+        <label for="amount">amount:</label>
+        <input type="number" name="number" id="amount" value="<%= transaction.amount %>"  required>
+      </div>
+
+      <div>
+        <label for="date"> date:</label>
+        <input type="date" name="date" id="date" value="<%= transaction.date.toISOString().slice(0, 10) %>" required>
+      </div>
+
+
+
+    <input type="submit" value="store">
+</form>
+
